@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kelas Hebat 2025 💫</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+    * {margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+    body {
+      background: linear-gradient(135deg, #05081a, #110035, #220050);
+      color: white;
+      overflow-x: hidden;
+    }
+    header {
+      position:fixed;top:0;left:0;width:100%;
+      display:flex;justify-content:space-between;align-items:center;
+      padding:15px 50px;
+      background:rgba(255,255,255,0.08);backdrop-filter:blur(10px);
+      z-index:100;
+    }
+    header h1 {color:#00eaff;text-shadow:0 0 10px #00eaff;}
+    nav a {color:white;text-decoration:none;margin:0 15px;font-weight:500;transition:0.3s;}
+    nav a:hover {color:#ff00ff;}
+
+    .hero {
+      height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
+      text-align:center;background:radial-gradient(circle at top,rgba(255,255,255,0.1),transparent);
+    }
+    .hero h2 {
+      font-size:3em;color:#00eaff;text-shadow:0 0 25px #00eaff,0 0 45px #ff00ff;
+      animation:glow 3s infinite alternate;
+    }
+    @keyframes glow {from{text-shadow:0 0 15px #00eaff;}to{text-shadow:0 0 35px #ff00ff;}}
+    .hero p {max-width:600px;margin-top:20px;font-size:1.2em;opacity:0.9;}
+    .btn {
+      margin-top:40px;padding:12px 30px;border:none;border-radius:30px;font-size:1em;
+      background:linear-gradient(45deg,#00eaff,#ff00ff);color:white;cursor:pointer;
+      box-shadow:0 0 20px rgba(255,0,255,0.4);transition:0.3s;
+    }
+    .btn:hover {transform:scale(1.05);box-shadow:0 0 35px #00eaff;}
+
+    /* LOGIN */
+    .modal {position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);display:none;justify-content:center;align-items:center;}
+    .modal.active {display:flex;}
+    .login-box {
+      background:rgba(255,255,255,0.1);backdrop-filter:blur(15px);padding:40px;border-radius:20px;
+      box-shadow:0 0 25px rgba(255,255,255,0.2);text-align:center;width:300px;animation:slide 0.6s ease;
+    }
+    @keyframes slide {from{transform:translateY(-30px);opacity:0;}to{transform:translateY(0);opacity:1;}}
+    .login-box input {
+      width:100%;margin:10px 0;padding:10px;border:none;border-radius:10px;
+      background:rgba(255,255,255,0.15);color:white;text-align:center;
+    }
+    .login-box button {
+      width:100%;margin-top:10px;padding:10px;border:none;border-radius:10px;
+      background:linear-gradient(45deg,#00eaff,#ff00ff);color:white;cursor:pointer;font-weight:600;transition:0.3s;
+    }
+    .login-box button:hover {transform:scale(1.05);}
+
+    /* DASHBOARD */
+    .dashboard {display:none;min-height:100vh;padding:100px 30px;background:linear-gradient(160deg,#110035,#220050,#330090);}
+    .dashboard.active {display:block;}
+    .dash-header {text-align:center;margin-bottom:40px;}
+    .dash-header h2 {color:#00eaff;text-shadow:0 0 15px #00eaff;}
+    .section {margin-bottom:50px;}
+    .section h3 {color:#ff00ff;margin-bottom:15px;text-align:center;font-size:1.4em;}
+    table {
+      width:100%;border-collapse:collapse;background:rgba(255,255,255,0.1);
+      backdrop-filter:blur(10px);border-radius:10px;overflow:hidden;
+    }
+    th, td {padding:12px 15px;text-align:center;}
+    th {background:rgba(0,0,0,0.3);color:#00eaff;}
+    tr:nth-child(even) {background:rgba(255,255,255,0.05);}
+    tr:hover {background:rgba(255,255,255,0.15);}
+    .logout-btn {
+      display:block;margin:40px auto;padding:10px 30px;border:none;border-radius:30px;
+      background:linear-gradient(45deg,#ff00ff,#00eaff);color:white;cursor:pointer;transition:0.3s;
+    }
+    .logout-btn:hover {transform:scale(1.05);}
+    footer {background:rgba(255,255,255,0.05);text-align:center;padding:20px;color:#ccc;font-size:0.9em;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Kelas Hebat 2025 💫</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#" onclick="openModal()">Login</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Selamat Datang di Kelas Hebat 2025 🎓</h2>
+    <p>Platform pembelajaran futuristik berwarna neon dan beranimasi 3D.</p>
+    <button class="btn" onclick="openModal()">Masuk Sekarang</button>
+  </section>
+
+  <div class="modal" id="loginModal">
+    <div class="login-box">
+      <h3>Login Akun</h3>
+      <input type="text" id="username" placeholder="Nama pengguna">
+      <input type="password" id="password" placeholder="Kata sandi">
+      <button onclick="login()">Masuk</button>
+      <button style="margin-top:10px;" onclick="closeModal()">Tutup</button>
+    </div>
+  </div>
+
+  <section class="dashboard" id="dashboard">
+    <div class="dash-header">
+      <h2>Selamat Datang, <span id="userDisplay"></span> 👋</h2>
+    </div>
+
+    <!-- Struktur Kelas -->
+    <div class="section">
+      <h3>🏫 Struktur Kelas</h3>
+      <table>
+        <tr><th>Jabatan</th><th>Nama</th></tr>
+        <tr><td>Kepala Sekolah</td><td>............................</td></tr>
+        <tr><td>Wali Kelas</td><td>............................</td></tr>
+        <tr><td>Ketua Kelas</td><td>............................</td></tr>
+        <tr><td>Wakil Ketua Kelas</td><td>............................</td></tr>
+        <tr><td>Sekretaris 1</td><td>............................</td></tr>
+        <tr><td>Sekretaris 2</td><td>............................</td></tr>
+        <tr><td>Bendahara 1</td><td>............................</td></tr>
+        <tr><td>Bendahara 2</td><td>............................</td></tr>
+        <tr><td>Seksi Keamanan</td><td>............................</td></tr>
+        <tr><td>Seksi Kebersihan</td><td>............................</td></tr>
+      </table>
+    </div>
+
+    <div class="section">
+      <h3>🧹 Jadwal Piket Kelas</h3>
+      <table>
+        <tr><th>Hari</th><th>Petugas Piket</th></tr>
+        <tr><td>Senin</td><td>Andi, Sinta</td></tr>
+        <tr><td>Selasa</td><td>Budi, Rani</td></tr>
+        <tr><td>Rabu</td><td>Doni, Lala</td></tr>
+        <tr><td>Kamis</td><td>Riko, Tia</td></tr>
+        <tr><td>Jumat</td><td>Rina, Bagus</td></tr>
+      </table>
+    </div>
+
+    <div class="section">
+      <h3>📚 Jadwal Pelajaran</h3>
+      <table>
+        <tr><th>Hari</th><th>Pelajaran</th></tr>
+        <tr><td>Senin</td><td>Matematika, Bahasa Indonesia, IPA</td></tr>
+        <tr><td>Selasa</td><td>Bahasa Inggris, IPS, Seni Budaya</td></tr>
+        <tr><td>Rabu</td><td>PJOK, PKN, Informatika</td></tr>
+        <tr><td>Kamis</td><td>Matematika, Bahasa Inggris, Prakarya</td></tr>
+        <tr><td>Jumat</td><td>Agama, Tematik, Kebersihan Kelas</td></tr>
+      </table>
+    </div>
+
+    <button class="logout-btn" onclick="logout()">Keluar</button>
+  </section>
+
+  <footer>
+    © 2025 Kelas Hebat 2025 — Dibuat dengan 💙 & 💜 oleh @Thv119
+  </footer>
+
+  <script>
+    const modal=document.getElementById("loginModal");
+    const dashboard=document.getElementById("dashboard");
+    const userDisplay=document.getElementById("userDisplay");
+    const hero=document.querySelector(".hero");
+
+    function openModal(){modal.classList.add("active");}
+    function closeModal(){modal.classList.remove("active");}
+
+    function login(){
+      const user=document.getElementById("username").value.trim();
+      const pass=document.getElementById("password").value.trim();
+      if(user==="kelas" && pass==="X.10"){
+        userDisplay.textContent=user;
+        modal.classList.remove("active");
+        hero.style.display="none";
+        dashboard.classList.add("active");
+        window.scrollTo(0,0);
+      } else {
+        alert("Username atau password salah!");
+      }
+    }
+
+    function logout(){
+      dashboard.classList.remove("active");
+      hero.style.display="flex";
+      alert("Kamu telah keluar dari Kelas Hebat 💫");
+    }
+  </script>
+</body>
+</html>
